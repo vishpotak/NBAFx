@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox fx:controller="controller.CurrentRoundTeamsController"
+    styleClass="background"  alignment="CENTER" prefHeight="300" prefWidth="400" spacing="20" xmlns:fx="http://javafx.com/fxml/1" >
+   
+    <padding>
+        <Insets top="0" bottom="10" left="0" right="0" />
+    </padding>
+    
+    <Label styleClass="label-h2" fx:id="currentRoundNo" text="" />
+   
+    <TableView fx:id="currentRoundTv" >
+         <placeholder>
+             <Label text="No Rounds"/>
+         </placeholder>
+         <columns>
+             <TableColumn fx:id="team1Clm"   text="Team-1"/>
+             <TableColumn fx:id="versus"     text=""/>
+             <TableColumn fx:id="team2Clm"   text="Team-2"/>
+         </columns>
+     </TableView>
+    
+    <Button alignment="BOTTOM_CENTER" fx:id="close" text="Close" onAction="#close"/>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

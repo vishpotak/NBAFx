@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox fx:controller="controller.ExploreTeamsController"
+    alignment="CENTER" styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20"
+       xmlns:fx="http://javafx.com/fxml/1" >
+    
+    <ImageView fitHeight="240" fitWidth="620"  >
+        <Image url="@NBA_Back.jpg" />
+    </ImageView>
+    
+    <VBox>
+        <padding>
+            <Insets top="10" bottom="10" left="10" right="10" />
+        </padding>
+
+        <HBox  spacing="240" >
+            <Button fx:id="teamsList"   text="Teams Menu"   onAction="#teamsMenu" />
+            <Button fx:id="playersList" text="View Players" onAction="#playerView"/>
+        </HBox>
+        
+        <HBox alignment="BOTTOM_CENTER" >
+            <Button fx:id="close" text="Close" onAction="#close" />
+        </HBox>
+    </VBox>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
+
